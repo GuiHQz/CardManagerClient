@@ -2,8 +2,8 @@ import styled from "styled-components";
 import BackgroundHeader from "../../assets/img/polygon-scatter-haikei.svg";
 
 export const Container = styled.div`
-  height: 100vh;
   background-color: #000d16;
+  height: 100vh;
 `;
 
 //HEADER
@@ -15,7 +15,7 @@ export const Header = styled.div`
   background-image: url(${BackgroundHeader});
   height: 30%;
   margin: 0 auto;
-  box-shadow: 0 0 50px 0 yellow;
+  box-shadow: 0 0 0.75rem 0 yellow;
 `;
 
 export const Form = styled.form`
@@ -43,8 +43,8 @@ export const Body = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 70%;
   width: 70%;
+  height: 70%;
   margin: 0 auto;
 `;
 
@@ -52,22 +52,26 @@ export const ul = styled.ul`
   display: flex;
   text-align: center;
   flex-direction: column;
+  .li-style:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 120, 0.2);
+  }
 `;
 
 export const li = styled.li`
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  background-color: #000d16;
   width: 20rem;
   height: 20rem;
   margin: 0 1rem;
-  border: 0.2rem solid yellow;
-  border-radius: 1rem;
-  background-color: #000d16;
-  display: flex;
-  justify-content: center;
-  align-items: end;
   font-weight: 800;
+  border-radius: 1rem;
+  border: 0.2rem solid yellow;
 `;
 
 export const h2 = styled.h2`
-  margin-top: 1rem;
   text-transform: uppercase;
+  margin-top: 1rem;
 `;

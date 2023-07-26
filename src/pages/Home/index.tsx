@@ -1,8 +1,10 @@
-import { FormEvent, useState } from "react";
 import * as style from "./styles";
+import { FormEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
   const [searchCards, setSearchCards] = useState<string>("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -34,15 +36,24 @@ export const Home = () => {
 
       <style.Body>
         <style.ul>
-          <style.li />
+          <style.li
+            onClick={() => navigate("/discover")}
+            className="li-style"
+          />
           <style.h2>Discover</style.h2>
         </style.ul>
         <style.ul>
-          <style.li />
+          <style.li
+            onClick={() => navigate("/listcards")}
+            className="li-style"
+          />
           <style.h2>All Cards</style.h2>
         </style.ul>
         <style.ul>
-          <style.li />
+          <style.li
+            onClick={() => navigate("/developers")}
+            className="li-style"
+          />
           <style.h2>Developers</style.h2>
         </style.ul>
       </style.Body>
