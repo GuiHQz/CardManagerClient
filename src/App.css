@@ -5,6 +5,10 @@
   font-family: sans-serif;
 }
 
+input {
+  outline: none;
+}
+
 html {
   font-size: 62.5%;
 }
